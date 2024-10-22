@@ -22,7 +22,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     sqlServerOptionsAction: sqlOptions =>
     {
         sqlOptions.EnableRetryOnFailure(
-            maxRetryCount: 5,         
+            maxRetryCount: 5,         //Implementing retry.
             maxRetryDelay: TimeSpan.FromSeconds(30),  
             errorNumbersToAdd: null    
         );
